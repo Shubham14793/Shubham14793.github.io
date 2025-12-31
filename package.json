@@ -1,0 +1,12 @@
+{
+  "name": "shubham-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website with CMS",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "serve": "python3 -m http.server 3000",
+    "dev": "echo 'Run npm run serve in one terminal, then open http://localhost:3000'"
+  },
+  "author": "Shubham",
+  "license": "MIT"
+}
