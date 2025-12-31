@@ -1,0 +1,262 @@
+{
+  "profile": {
+    "name": "Shubham",
+    "title": "Full Stack Developer",
+    "tagline": "A passionate developer crafting beautiful digital experiences with modern technologies.",
+    "bio": "I'm a passionate full-stack developer with expertise in building scalable web applications and beautiful user interfaces. With a strong foundation in both frontend and backend technologies, I create seamless digital experiences that make a difference.",
+    "bioExtended": "My journey in tech started with curiosity and grew into a career driven by innovation. I believe in writing clean, maintainable code and staying updated with the latest industry trends.",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    "location": "India",
+    "email": "hello@techwithshubham.me",
+    "website": "techwithshubham.me",
+    "availability": true,
+    "resumeUrl": "#"
+  },
+  "stats": {
+    "yearsExperience": 5,
+    "projectsCompleted": 50,
+    "happyClients": 30
+  },
+  "social": {
+    "github": "https://github.com/Shubham14793",
+    "linkedin": "#",
+    "twitter": "#",
+    "instagram": "#",
+    "youtube": "#",
+    "discord": "#"
+  },
+  "skills": [
+    { "name": "JavaScript / TypeScript", "level": 95 },
+    { "name": "React / Vue.js", "level": 90 },
+    { "name": "Node.js / Python", "level": 85 },
+    { "name": "AWS / Cloud", "level": 80 },
+    { "name": "UI/UX Design", "level": 75 }
+  ],
+  "languages": [
+    { "name": "English", "level": 5 },
+    { "name": "Hindi", "level": 5 }
+  ],
+  "experience": [
+    {
+      "id": "exp-1",
+      "title": "Senior Full Stack Developer",
+      "company": "Tech Company Inc.",
+      "period": "2022 - Present",
+      "description": "Leading development of enterprise-scale applications, mentoring junior developers, and architecting scalable solutions."
+    },
+    {
+      "id": "exp-2",
+      "title": "Full Stack Developer",
+      "company": "Digital Agency",
+      "period": "2020 - 2022",
+      "description": "Developed custom web applications for clients across various industries, focusing on React and Node.js."
+    },
+    {
+      "id": "exp-3",
+      "title": "Junior Developer",
+      "company": "Startup Hub",
+      "period": "2018 - 2020",
+      "description": "Started my career building responsive websites and learning modern web development practices."
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "degree": "Bachelor's in Computer Science",
+      "institution": "University of Technology",
+      "period": "2014 - 2018"
+    },
+    {
+      "id": "edu-2",
+      "degree": "Full Stack Development",
+      "institution": "Online Certification",
+      "period": "2019"
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert-1",
+      "name": "AWS Certified Developer",
+      "issuer": "Amazon Web Services",
+      "icon": "fab fa-aws",
+      "color": "from-amber-500 to-orange-500"
+    },
+    {
+      "id": "cert-2",
+      "name": "Professional Cloud Architect",
+      "issuer": "Google Cloud",
+      "icon": "fab fa-google",
+      "color": "from-blue-500 to-cyan-500"
+    },
+    {
+      "id": "cert-3",
+      "name": "Meta Frontend Developer",
+      "issuer": "Meta",
+      "icon": "fab fa-meta",
+      "color": "from-primary to-secondary"
+    }
+  ],
+  "services": [
+    {
+      "id": "svc-1",
+      "title": "Web Development",
+      "description": "Building responsive and performant websites using modern technologies and best practices.",
+      "icon": "fas fa-code",
+      "color": "from-primary to-secondary"
+    },
+    {
+      "id": "svc-2",
+      "title": "Mobile Apps",
+      "description": "Creating cross-platform mobile applications with React Native and Flutter.",
+      "icon": "fas fa-mobile-alt",
+      "color": "from-blue-500 to-cyan-500"
+    },
+    {
+      "id": "svc-3",
+      "title": "UI/UX Design",
+      "description": "Designing intuitive and beautiful user interfaces that enhance user experience.",
+      "icon": "fas fa-palette",
+      "color": "from-amber-500 to-orange-500"
+    },
+    {
+      "id": "svc-4",
+      "title": "Backend & API",
+      "description": "Developing robust backend systems and RESTful APIs with Node.js and Python.",
+      "icon": "fas fa-server",
+      "color": "from-emerald-500 to-teal-500"
+    }
+  ],
+  "techStack": [
+    { "name": "HTML5", "icon": "fab fa-html5", "color": "#E34F26" },
+    { "name": "CSS3", "icon": "fab fa-css3-alt", "color": "#1572B6" },
+    { "name": "JavaScript", "icon": "fab fa-js", "color": "#F7DF1E" },
+    { "name": "React", "icon": "fab fa-react", "color": "#61DAFB" },
+    { "name": "Node.js", "icon": "fab fa-node-js", "color": "#339933" },
+    { "name": "Python", "icon": "fab fa-python", "color": "#3776AB" },
+    { "name": "AWS", "icon": "fab fa-aws", "color": "#FF9900" },
+    { "name": "Git", "icon": "fab fa-git-alt", "color": "#F05032" }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "E-Commerce Platform",
+      "description": "A full-stack e-commerce solution with modern UI, secure payment integration, and seamless shopping experience.",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      "category": "web",
+      "tags": ["React", "Node.js", "MongoDB"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "featured": true
+    },
+    {
+      "id": "proj-2",
+      "title": "Analytics Dashboard",
+      "description": "Real-time analytics dashboard with interactive charts, custom reports, and data visualization.",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      "category": "web",
+      "tags": ["Vue.js", "D3.js", "Firebase"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "featured": true
+    },
+    {
+      "id": "proj-3",
+      "title": "Mobile Banking App",
+      "description": "Secure mobile banking application with biometric authentication and real-time transactions.",
+      "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
+      "category": "mobile",
+      "tags": ["React Native", "Redux", "AWS"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "featured": true
+    },
+    {
+      "id": "proj-4",
+      "title": "SaaS Landing Page",
+      "description": "Modern and conversion-focused landing page design for a SaaS product with clean aesthetics.",
+      "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
+      "category": "design",
+      "tags": ["Figma", "UI Design", "Tailwind"],
+      "liveUrl": "#",
+      "githubUrl": null,
+      "featured": false
+    },
+    {
+      "id": "proj-5",
+      "title": "REST API Service",
+      "description": "Scalable RESTful API with authentication, rate limiting, and comprehensive documentation.",
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
+      "category": "api",
+      "tags": ["Node.js", "Express", "PostgreSQL"],
+      "liveUrl": null,
+      "githubUrl": "#",
+      "featured": false
+    },
+    {
+      "id": "proj-6",
+      "title": "Fitness Tracker App",
+      "description": "Cross-platform fitness application with workout tracking, meal planning, and progress analytics.",
+      "image": "https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=600&h=400&fit=crop",
+      "category": "mobile",
+      "tags": ["Flutter", "Dart", "Firebase"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "featured": false
+    },
+    {
+      "id": "proj-7",
+      "title": "Task Management System",
+      "description": "Collaborative project management tool with real-time updates, Kanban boards, and team features.",
+      "image": "https://images.unsplash.com/photo-1522542550221-31fd8575f56a?w=600&h=400&fit=crop",
+      "category": "web",
+      "tags": ["Next.js", "Prisma", "TypeScript"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "featured": false
+    },
+    {
+      "id": "proj-8",
+      "title": "Design System",
+      "description": "Comprehensive design system with reusable components, documentation, and accessibility guidelines.",
+      "image": "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&h=400&fit=crop",
+      "category": "design",
+      "tags": ["Figma", "Storybook", "Design Tokens"],
+      "liveUrl": "#",
+      "githubUrl": null,
+      "featured": false
+    },
+    {
+      "id": "proj-9",
+      "title": "AI Chatbot API",
+      "description": "Intelligent conversational AI API powered by machine learning for customer support automation.",
+      "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop",
+      "category": "api",
+      "tags": ["Python", "FastAPI", "OpenAI"],
+      "liveUrl": null,
+      "githubUrl": "#",
+      "featured": false
+    }
+  ],
+  "faq": [
+    {
+      "id": "faq-1",
+      "question": "What services do you offer?",
+      "answer": "I offer a range of services including web development, mobile app development, UI/UX design, and backend API development. I specialize in creating modern, responsive, and scalable digital solutions."
+    },
+    {
+      "id": "faq-2",
+      "question": "What is your typical project timeline?",
+      "answer": "Project timelines vary based on complexity and scope. A typical website takes 2-4 weeks, while larger applications can take 2-3 months. I'll provide a detailed timeline after understanding your requirements."
+    },
+    {
+      "id": "faq-3",
+      "question": "Do you offer ongoing support?",
+      "answer": "Yes! I offer ongoing maintenance and support packages to ensure your project stays up-to-date, secure, and running smoothly. This includes bug fixes, updates, and feature enhancements."
+    },
+    {
+      "id": "faq-4",
+      "question": "How do we get started?",
+      "answer": "Simply fill out the contact form above or send me an email. I'll review your requirements and schedule a free consultation call to discuss your project in detail and provide a quote."
+    }
+  ]
+}
