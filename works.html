@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works | Shubham Portfolio</title>
+    <meta name="description" content="Explore Shubham's portfolio of web development and design projects">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7C3AED',
+                        secondary: '#EC4899',
+                        dark: {
+                            100: '#1E1E2E',
+                            200: '#181825',
+                            300: '#11111B',
+                        },
+                        light: {
+                            100: '#F8FAFC',
+                            200: '#E2E8F0',
+                            300: '#CBD5E1',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Poppins', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-dark-300 text-white font-sans antialiased">
+    <!-- Loader -->
+    <div id="loader" class="fixed inset-0 z-[100] bg-dark-300 flex items-center justify-center transition-opacity duration-500">
+        <div class="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-300/80 backdrop-blur-lg border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center font-display font-bold text-lg group-hover:scale-110 transition-transform">
+                        S
+                    </div>
+                    <span class="font-display font-semibold text-lg hidden sm:block">Shubham</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="works.html" class="nav-link active">Works</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <!-- CTA & Theme Toggle -->
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="w-10 h-10 rounded-xl bg-dark-100 flex items-center justify-center hover:bg-dark-200 transition-colors">
+                        <i class="fas fa-moon text-light-300"></i>
+                    </button>
+                    <a href="contact.html" class="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary to-secondary rounded-xl font-medium hover:opacity-90 transition-opacity">
+                        Let's Talk
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-xl bg-dark-100 flex items-center justify-center">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-dark-200 border-t border-white/5">
+            <div class="px-4 py-4 space-y-2">
+                <a href="index.html" class="block px-4 py-3 rounded-xl hover:bg-white/5 transition-colors">Home</a>
+                <a href="about.html" class="block px-4 py-3 rounded-xl hover:bg-white/5 transition-colors">About</a>
+                <a href="works.html" class="block px-4 py-3 rounded-xl bg-primary/10 text-primary font-medium">Works</a>
+                <a href="contact.html" class="block px-4 py-3 rounded-xl hover:bg-white/5 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 md:pt-32 pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Page Header -->
+            <div class="text-center mb-12">
+                <span class="inline-block px-4 py-1.5 bg-dark-100 rounded-full text-sm text-light-300 mb-4">
+                    <i class="fas fa-folder-open mr-2 text-primary"></i>
+                    Portfolio
+                </span>
+                <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                    My <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Works</span>
+                </h1>
+                <p class="text-light-300 text-lg max-w-2xl mx-auto">
+                    A collection of projects that showcase my skills, creativity, and dedication to crafting exceptional digital experiences.
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <button class="filter-btn active" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    Web Apps
+                </button>
+                <button class="filter-btn" data-filter="mobile">
+                    Mobile
+                </button>
+                <button class="filter-btn" data-filter="design">
+                    UI/UX
+                </button>
+                <button class="filter-btn" data-filter="api">
+                    Backend/API
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card bg-dark-100 rounded-3xl overflow-hidden group" data-category="web">
+                    <div class="aspect-video overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" 
+                             alt="E-Commerce Platform" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-300/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">React</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Node.js</span>
+                            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs rounded-full">MongoDB</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">E-Commerce Platform</h3>
+                        <p class="text-light-300 text-sm">A full-stack e-commerce solution with modern UI, secure payment integration, and seamless shopping experience.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-dark-100 rounded-3xl overflow-hidden group" data-category="web">
+                    <div class="aspect-video overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" 
+                             alt="Analytics Dashboard" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-300/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Vue.js</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">D3.js</span>
+                            <span class="px-3 py-1 bg-amber-500/10 text-amber-400 text-xs rounded-full">Firebase</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Analytics Dashboard</h3>
+                        <p class="text-light-300 text-sm">Real-time analytics dashboard with interactive charts, custom reports, and data visualization.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-dark-100 rounded-3xl overflow-hidden group" data-category="mobile">
+                    <div class="aspect-video overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop" 
+                             alt="Mobile Banking App" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-300/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">React Native</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Redux</span>
+                            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full">AWS</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Mobile Banking App</h3>
+                        <p class="text-light-300 text-sm">Secure mobile banking application with biometric authentication and real-time transactions.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card bg-dark-100 rounded-3xl overflow-hidden group" data-category="design">
+                    <div class="aspect-video overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop" 
+                             alt="SaaS Landing Page" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-300/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fab fa-figma"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Figma</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">UI Design</span>
+                            <span class="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full">Tailwind</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">SaaS Landing Page</h3>
+                        <p class="text-light-300 text-sm">Modern and conversion-focused landing page design for a SaaS product with clean aesthetics.</p>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card bg-dark-100 rounded-3xl overflow-hidden group" data-category="api">
+                    <div class="aspect-video overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop" 
+                             alt="REST API Service" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-300/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fas fa-book"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Node.js</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Express</span>
+                            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs rounded-full">PostgreSQL</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">REST API Service</h3>
+                        <p class="text-light-300 text-sm">Scalable RESTful API with authentication, rate limiting, and comprehensive documentation.</p>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card bg-dark-100 rounded-3xl overflow-hidden group" data-category="mobile">
+                    <div class="aspect-video overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=600&h=400&fit=crop" 
+                             alt="Fitness Tracker App" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-300/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Flutter</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Dart</span>
+                            <span class="px-3 py-1 bg-amber-500/10 text-amber-400 text-xs rounded-full">Firebase</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Fitness Tracker App</h3>
+                        <p class="text-light-300 text-sm">Cross-platform fitness application with workout tracking, meal planning, and progress analytics.</p>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card bg-dark-100 rounded-3xl overflow-hidden group" data-category="web">
+                    <div class="aspect-video overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd8575f56a?w=600&h=400&fit=crop" 
+                             alt="Task Management System" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-300/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Next.js</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Prisma</span>
+                            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full">TypeScript</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Task Management System</h3>
+                        <p class="text-light-300 text-sm">Collaborative project management tool with real-time updates, Kanban boards, and team features.</p>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card bg-dark-100 rounded-3xl overflow-hidden group" data-category="design">
+                    <div class="aspect-video overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&h=400&fit=crop" 
+                             alt="Design System" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-300/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fab fa-figma"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Figma</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Storybook</span>
+                            <span class="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full">Design Tokens</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Design System</h3>
+                        <p class="text-light-300 text-sm">Comprehensive design system with reusable components, documentation, and accessibility guidelines.</p>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card bg-dark-100 rounded-3xl overflow-hidden group" data-category="api">
+                    <div class="aspect-video overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop" 
+                             alt="AI Chatbot API" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-300/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                            <div class="flex gap-3">
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors">
+                                    <i class="fas fa-book"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">FastAPI</span>
+                            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs rounded-full">OpenAI</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">AI Chatbot API</h3>
+                        <p class="text-light-300 text-sm">Intelligent conversational AI API powered by machine learning for customer support automation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More -->
+            <div class="text-center mt-10">
+                <button class="inline-flex items-center gap-2 px-8 py-3 bg-dark-100 rounded-xl font-medium hover:bg-dark-200 transition-colors border border-white/10">
+                    <i class="fas fa-plus"></i>
+                    Load More Projects
+                </button>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="mt-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-dark-100/50"></div>
+                <div class="relative z-10">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Have a Project in Mind?</h2>
+                    <p class="text-light-300 text-lg max-w-2xl mx-auto mb-6">
+                        Let's collaborate and bring your ideas to life. I'm always excited to work on new and challenging projects.
+                    </p>
+                    <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-secondary rounded-xl font-medium hover:opacity-90 transition-opacity">
+                        Start a Conversation
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center font-display font-bold text-sm">
+                        S
+                    </div>
+                    <span class="text-light-300">© 2025 Shubham. All rights reserved.</span>
+                </div>
+                <div class="flex items-center gap-6">
+                    <a href="index.html" class="text-light-300 hover:text-white transition-colors">Home</a>
+                    <a href="about.html" class="text-light-300 hover:text-white transition-colors">About</a>
+                    <a href="works.html" class="text-light-300 hover:text-white transition-colors">Works</a>
+                    <a href="contact.html" class="text-light-300 hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

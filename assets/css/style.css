@@ -1,0 +1,508 @@
+/* ==========================================
+   Shubham Portfolio - Custom Styles
+   ========================================== */
+
+/* ==========================================
+   CSS Variables
+   ========================================== */
+:root {
+    --primary: #7C3AED;
+    --secondary: #EC4899;
+    --dark-100: #1E1E2E;
+    --dark-200: #181825;
+    --dark-300: #11111B;
+    --light-100: #F8FAFC;
+    --light-200: #E2E8F0;
+    --light-300: #CBD5E1;
+}
+
+/* ==========================================
+   Base Styles
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Selection styling */
+::selection {
+    background: var(--primary);
+    color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-300);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary), var(--secondary));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--secondary), var(--primary));
+}
+
+/* ==========================================
+   Loader Styles
+   ========================================== */
+#loader {
+    z-index: 9999;
+}
+
+#loader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ==========================================
+   Navigation Styles
+   ========================================== */
+.nav-link {
+    position: relative;
+    color: var(--light-300);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: white;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ==========================================
+   Card Hover Effects
+   ========================================== */
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   Marquee Animation
+   ========================================== */
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-flex;
+    animation: marquee 25s linear infinite;
+}
+
+.marquee-item {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.marquee-star {
+    margin: 0 1rem;
+    font-size: 1.25rem;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause marquee on hover */
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* ==========================================
+   Tech Stack Icons
+   ========================================== */
+.tech-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1;
+    background: var(--dark-200);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.tech-icon:hover {
+    background: var(--dark-100);
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   Skill Bars Animation
+   ========================================== */
+.skill-bar {
+    width: 0;
+    animation: skillFill 1.5s ease forwards;
+}
+
+@keyframes skillFill {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--skill-width, 100%);
+    }
+}
+
+/* Trigger animation when in view */
+.skill-bar[style*="95%"] { --skill-width: 95%; }
+.skill-bar[style*="90%"] { --skill-width: 90%; }
+.skill-bar[style*="85%"] { --skill-width: 85%; }
+.skill-bar[style*="80%"] { --skill-width: 80%; }
+.skill-bar[style*="75%"] { --skill-width: 75%; }
+
+/* ==========================================
+   Filter Buttons
+   ========================================== */
+.filter-btn {
+    padding: 0.625rem 1.25rem;
+    background: var(--dark-100);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    color: var(--light-300);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: var(--dark-200);
+    color: white;
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-color: transparent;
+    color: white;
+}
+
+/* ==========================================
+   Project Cards
+   ========================================== */
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card.hidden {
+    display: none;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   Form Styles
+   ========================================== */
+input, textarea, select {
+    font-family: inherit;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+/* Custom select dropdown styling */
+select option {
+    background: var(--dark-200);
+    color: white;
+}
+
+/* ==========================================
+   FAQ Accordion
+   ========================================== */
+.faq-item .faq-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle i {
+    transform: rotate(180deg);
+}
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-content {
+    max-height: 200px;
+}
+
+/* ==========================================
+   Animations
+   ========================================== */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(124, 58, 237, 0.6);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Animate elements on scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger animation for grid items */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* ==========================================
+   Gradient Text
+   ========================================== */
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ==========================================
+   Button Styles
+   ========================================== */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 0.75rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--dark-200);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--dark-100);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   Glassmorphism Effect
+   ========================================== */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================
+   Responsive Utilities
+   ========================================== */
+@media (max-width: 768px) {
+    .marquee-item {
+        font-size: 1rem;
+    }
+    
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .marquee-item {
+        font-size: 0.875rem;
+        margin: 0 1rem;
+    }
+}
+
+/* ==========================================
+   Light Theme (Optional)
+   ========================================== */
+.light-theme {
+    --dark-100: #F1F5F9;
+    --dark-200: #E2E8F0;
+    --dark-300: #FFFFFF;
+    --light-100: #1E1E2E;
+    --light-200: #374151;
+    --light-300: #4B5563;
+}
+
+.light-theme body {
+    background: var(--dark-300);
+    color: var(--light-100);
+}
+
+/* ==========================================
+   Print Styles
+   ========================================== */
+@media print {
+    nav, footer, .no-print {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+/* ==========================================
+   Accessibility
+   ========================================== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .marquee-content {
+        animation: none;
+    }
+}
