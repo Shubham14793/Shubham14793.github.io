@@ -50,24 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ==========================================
-    // Theme Toggle (Optional - for future use)
-    // ==========================================
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-        themeToggle.addEventListener('click', function() {
-            document.documentElement.classList.toggle('light-theme');
-            const icon = themeToggle.querySelector('i');
-            if (document.documentElement.classList.contains('light-theme')) {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            }
-        });
-    }
-
-    // ==========================================
     // Counter Animation
     // ==========================================
     const counters = document.querySelectorAll('.counter');

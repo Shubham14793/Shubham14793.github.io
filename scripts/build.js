@@ -131,7 +131,7 @@ const helpers = {
         const links = [];
         if (social.github) links.push(`<a href="${social.github}" class="w-11 h-11 bg-dark-200 rounded-xl flex items-center justify-center hover:bg-primary transition-colors group"><i class="fab fa-github text-light-300 group-hover:text-white"></i></a>`);
         if (social.linkedin) links.push(`<a href="${social.linkedin}" class="w-11 h-11 bg-dark-200 rounded-xl flex items-center justify-center hover:bg-[#0077B5] transition-colors group"><i class="fab fa-linkedin-in text-light-300 group-hover:text-white"></i></a>`);
-        if (social.twitter) links.push(`<a href="${social.twitter}" class="w-11 h-11 bg-dark-200 rounded-xl flex items-center justify-center hover:bg-[#1DA1F2] transition-colors group"><i class="fab fa-twitter text-light-300 group-hover:text-white"></i></a>`);
+        if (social.x) links.push(`<a href="${social.x}" class="w-11 h-11 bg-dark-200 rounded-xl flex items-center justify-center hover:bg-black transition-colors group"><i class="fab fa-x-twitter text-light-300 group-hover:text-white"></i></a>`);
         if (social.instagram) links.push(`<a href="${social.instagram}" class="w-11 h-11 bg-dark-200 rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 transition-colors group"><i class="fab fa-instagram text-light-300 group-hover:text-white"></i></a>`);
         return links.join('\n                        ');
     },
@@ -141,7 +141,7 @@ const helpers = {
         const links = [];
         if (social.github) links.push(`<a href="${social.github}" class="flex items-center gap-3 p-3 bg-dark-200 rounded-xl hover:bg-white/10 transition-colors group"><i class="fab fa-github text-xl text-light-300 group-hover:text-white"></i><span class="text-sm">GitHub</span></a>`);
         if (social.linkedin) links.push(`<a href="${social.linkedin}" class="flex items-center gap-3 p-3 bg-dark-200 rounded-xl hover:bg-[#0077B5]/20 transition-colors group"><i class="fab fa-linkedin-in text-xl text-light-300 group-hover:text-[#0077B5]"></i><span class="text-sm">LinkedIn</span></a>`);
-        if (social.twitter) links.push(`<a href="${social.twitter}" class="flex items-center gap-3 p-3 bg-dark-200 rounded-xl hover:bg-[#1DA1F2]/20 transition-colors group"><i class="fab fa-twitter text-xl text-light-300 group-hover:text-[#1DA1F2]"></i><span class="text-sm">Twitter</span></a>`);
+        if (social.x) links.push(`<a href="${social.x}" class="flex items-center gap-3 p-3 bg-dark-200 rounded-xl hover:bg-black/20 transition-colors group"><i class="fab fa-x-twitter text-xl text-light-300 group-hover:text-white"></i><span class="text-sm">X</span></a>`);
         if (social.instagram) links.push(`<a href="${social.instagram}" class="flex items-center gap-3 p-3 bg-dark-200 rounded-xl hover:bg-pink-500/20 transition-colors group"><i class="fab fa-instagram text-xl text-light-300 group-hover:text-pink-500"></i><span class="text-sm">Instagram</span></a>`);
         if (social.youtube) links.push(`<a href="${social.youtube}" class="flex items-center gap-3 p-3 bg-dark-200 rounded-xl hover:bg-[#FF0000]/20 transition-colors group"><i class="fab fa-youtube text-xl text-light-300 group-hover:text-[#FF0000]"></i><span class="text-sm">YouTube</span></a>`);
         if (social.discord) links.push(`<a href="${social.discord}" class="flex items-center gap-3 p-3 bg-dark-200 rounded-xl hover:bg-[#5865F2]/20 transition-colors group"><i class="fab fa-discord text-xl text-light-300 group-hover:text-[#5865F2]"></i><span class="text-sm">Discord</span></a>`);
@@ -165,6 +165,7 @@ function processTemplate(template, data) {
     // Simple replacements
     const replacements = {
         '{{name}}': data.profile.name,
+        '{{initial}}': data.profile.name.charAt(0).toUpperCase(),
         '{{title}}': data.profile.title,
         '{{tagline}}': data.profile.tagline,
         '{{bio}}': data.profile.bio,

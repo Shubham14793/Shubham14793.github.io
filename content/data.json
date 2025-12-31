@@ -5,11 +5,11 @@
     "tagline": "A passionate developer crafting beautiful digital experiences with modern technologies.",
     "bio": "I'm a passionate full-stack developer with expertise in building scalable web applications and beautiful user interfaces. With a strong foundation in both frontend and backend technologies, I create seamless digital experiences that make a difference.",
     "bioExtended": "My journey in tech started with curiosity and grew into a career driven by innovation. I believe in writing clean, maintainable code and staying updated with the latest industry trends.",
-    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    "avatar": "assets/images/PROFILE-PIC.jpeg",
     "location": "India",
     "email": "helloreachouttiome@techwithshubham.me",
-    "website": "http://techwithshubham.me",
-    "resumeUrl": "#",
+    "website": "https://techwithshubham.me",
+    "resumeUrl": "assets/documents/resume.pdf",
     "availability": true
   },
   "stats": {
@@ -20,7 +20,7 @@
   "social": {
     "github": "https://github.com/Shubham14793",
     "linkedin": "#",
-    "twitter": "#",
+    "x": "#",
     "instagram": "#",
     "youtube": "#",
     "discord": "#"
@@ -194,7 +194,7 @@
       "id": "proj-1",
       "title": "E-Commerce Platform",
       "description": "A full-stack e-commerce solution with modern UI, secure payment integration, and seamless shopping experience.",
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      "image": "assets/images/projects/E-COMMERCE.jpeg",
       "category": "web",
       "tags": [
         "React",
@@ -209,7 +209,7 @@
       "id": "proj-2",
       "title": "Analytics Dashboard",
       "description": "Real-time analytics dashboard with interactive charts, custom reports, and data visualization.",
-      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      "image": "assets/images/projects/ANALYTICS-DASHBOARD.jpeg",
       "category": "web",
       "tags": [
         "Vue.js",
@@ -224,7 +224,7 @@
       "id": "proj-3",
       "title": "Mobile Banking App",
       "description": "Secure mobile banking application with biometric authentication and real-time transactions.",
-      "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
+      "image": "assets/images/projects/MOBILE-APPS.jpeg",
       "category": "mobile",
       "tags": [
         "React Native",
@@ -239,7 +239,7 @@
       "id": "proj-4",
       "title": "SaaS Landing Page",
       "description": "Modern and conversion-focused landing page design for a SaaS product with clean aesthetics.",
-      "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
+      "image": "assets/images/projects/SAAS-PAGES.jpeg",
       "category": "design",
       "tags": [
         "Figma",
@@ -254,7 +254,7 @@
       "id": "proj-5",
       "title": "REST API Service",
       "description": "Scalable RESTful API with authentication, rate limiting, and comprehensive documentation.",
-      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
+      "image": "assets/images/projects/REST-APIS.jpeg",
       "category": "api",
       "tags": [
         "Node.js",
@@ -269,7 +269,7 @@
       "id": "proj-6",
       "title": "Fitness Tracker App",
       "description": "Cross-platform fitness application with workout tracking, meal planning, and progress analytics.",
-      "image": "https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=600&h=400&fit=crop",
+      "image": "assets/images/projects/PERSONAL-APPS.jpeg",
       "category": "mobile",
       "tags": [
         "Flutter",
@@ -281,25 +281,10 @@
       "featured": false
     },
     {
-      "id": "proj-7",
-      "title": "Task Management System",
-      "description": "Collaborative project management tool with real-time updates, Kanban boards, and team features.",
-      "image": "https://images.unsplash.com/photo-1522542550221-31fd8575f56a?w=600&h=400&fit=crop",
-      "category": "web",
-      "tags": [
-        "Next.js",
-        "Prisma",
-        "TypeScript"
-      ],
-      "liveUrl": "#",
-      "githubUrl": "#",
-      "featured": false
-    },
-    {
       "id": "proj-8",
       "title": "Design System",
       "description": "Comprehensive design system with reusable components, documentation, and accessibility guidelines.",
-      "image": "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&h=400&fit=crop",
+      "image": "assets/images/projects/SYSTEM-DESIGN-APPS.jpeg",
       "category": "design",
       "tags": [
         "Figma",
@@ -314,7 +299,7 @@
       "id": "proj-9",
       "title": "AI Chatbot API",
       "description": "Intelligent conversational AI API powered by machine learning for customer support automation.",
-      "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop",
+      "image": "assets/images/projects/AI-POWERED-APPS.jpeg",
       "category": "api",
       "tags": [
         "Python",
