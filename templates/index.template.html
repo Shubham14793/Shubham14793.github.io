@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubham | Portfolio</title>
-    <meta name="description" content="Professional portfolio of Shubham - Full Stack Developer">
+    <title>{{name}} | Portfolio</title>
+    <meta name="description" content="Professional portfolio of {{name}} - {{title}}">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -60,9 +60,9 @@
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center gap-2 group">
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center font-display font-bold text-lg group-hover:scale-110 transition-transform">
-                        Shubham
+                        {{name}}
                     </div>
-                    <span class="font-display font-semibold text-lg hidden sm:block">Shubham</span>
+                    <span class="font-display font-semibold text-lg hidden sm:block">{{name}}</span>
                 </a>
 
                 <!-- Desktop Menu -->
@@ -112,14 +112,14 @@
                     <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="relative z-10">
                         <span class="inline-block px-4 py-1.5 bg-dark-200 rounded-full text-sm text-light-300 mb-4">
-                            <i class="fas fa-circle text-green-400 text-xs mr-2 animate-pulse"></i>
-                            Available for work
+                            <i class="fas fa-circle {{availabilityClass}} text-xs mr-2 animate-pulse"></i>
+                            {{availability}}
                         </span>
                         <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-                            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Shubham</span>
+                            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">{{name}}</span>
                         </h1>
                         <p class="text-light-300 text-lg md:text-xl mb-6 max-w-lg">
-                            A passionate developer crafting beautiful digital experiences with modern technologies.
+                            {{tagline}}
                         </p>
                         <div class="flex flex-wrap gap-3">
                             <a href="works.html" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary rounded-xl font-medium hover:opacity-90 transition-opacity">
@@ -138,13 +138,13 @@
                 <!-- Profile Image Card -->
                 <div class="bg-dark-100 rounded-3xl p-4 relative overflow-hidden group">
                     <div class="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
+                        <img src="{{avatar}}" 
                              alt="Profile" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="absolute inset-x-4 bottom-4 bg-dark-200/90 backdrop-blur-sm rounded-xl p-3 text-center">
-                        <p class="font-display font-semibold">Shubham</p>
-                        <p class="text-sm text-light-300">Full Stack Developer</p>
+                        <p class="font-display font-semibold">{{name}}</p>
+                        <p class="text-sm text-light-300">{{title}}</p>
                     </div>
                 </div>
 
@@ -194,15 +194,15 @@
                 <div class="md:col-span-2 bg-dark-100 rounded-3xl p-6 md:p-8">
                     <div class="grid grid-cols-3 gap-4 md:gap-8">
                         <div class="text-center">
-                            <div class="font-display text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary counter" data-target="5">0</div>
+                            <div class="font-display text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary counter" data-target="{{yearsExperience}}">0</div>
                             <p class="text-light-300 text-sm md:text-base mt-2">Years<br>Experience</p>
                         </div>
                         <div class="text-center">
-                            <div class="font-display text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary counter" data-target="50">0</div>
+                            <div class="font-display text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary counter" data-target="{{projectsCompleted}}">0</div>
                             <p class="text-light-300 text-sm md:text-base mt-2">Projects<br>Completed</p>
                         </div>
                         <div class="text-center">
-                            <div class="font-display text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary counter" data-target="30">0</div>
+                            <div class="font-display text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary counter" data-target="{{happyClients}}">0</div>
                             <p class="text-light-300 text-sm md:text-base mt-2">Happy<br>Clients</p>
                         </div>
                     </div>
@@ -213,10 +213,7 @@
                     <span class="text-sm text-light-300 uppercase tracking-wider">Stay Connected</span>
                     <h3 class="font-display text-2xl font-bold mt-2 mb-4">Profiles</h3>
                     <div class="flex gap-3">
-                        <a href="https://github.com/Shubham14793" class="w-11 h-11 bg-dark-200 rounded-xl flex items-center justify-center hover:bg-primary transition-colors group"><i class="fab fa-github text-light-300 group-hover:text-white"></i></a>
-                        <a href="#" class="w-11 h-11 bg-dark-200 rounded-xl flex items-center justify-center hover:bg-[#0077B5] transition-colors group"><i class="fab fa-linkedin-in text-light-300 group-hover:text-white"></i></a>
-                        <a href="#" class="w-11 h-11 bg-dark-200 rounded-xl flex items-center justify-center hover:bg-[#1DA1F2] transition-colors group"><i class="fab fa-twitter text-light-300 group-hover:text-white"></i></a>
-                        <a href="#" class="w-11 h-11 bg-dark-200 rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 transition-colors group"><i class="fab fa-instagram text-light-300 group-hover:text-white"></i></a>
+                        {{socialLinks}}
                     </div>
                 </div>
 
@@ -272,69 +269,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    
-                    <div class="project-card bg-dark-100 rounded-3xl overflow-hidden group" data-category="web">
-                        <div class="aspect-video overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" 
-                                 alt="E-Commerce Platform" 
-                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-dark-300/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
-                                <div class="flex gap-3">
-                                    <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors"><i class="fas fa-external-link-alt"></i></a>
-                                    <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex flex-wrap gap-2 mb-3">
-                                <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">React</span><span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Node.js</span><span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">MongoDB</span>
-                            </div>
-                            <h3 class="font-display text-xl font-bold mb-2">E-Commerce Platform</h3>
-                            <p class="text-light-300 text-sm">A full-stack e-commerce solution with modern UI, secure payment integration, and seamless shopping experience.</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card bg-dark-100 rounded-3xl overflow-hidden group" data-category="web">
-                        <div class="aspect-video overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" 
-                                 alt="Analytics Dashboard" 
-                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-dark-300/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
-                                <div class="flex gap-3">
-                                    <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors"><i class="fas fa-external-link-alt"></i></a>
-                                    <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex flex-wrap gap-2 mb-3">
-                                <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Vue.js</span><span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">D3.js</span><span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Firebase</span>
-                            </div>
-                            <h3 class="font-display text-xl font-bold mb-2">Analytics Dashboard</h3>
-                            <p class="text-light-300 text-sm">Real-time analytics dashboard with interactive charts, custom reports, and data visualization.</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card bg-dark-100 rounded-3xl overflow-hidden group" data-category="mobile">
-                        <div class="aspect-video overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop" 
-                                 alt="Mobile Banking App" 
-                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-dark-300/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
-                                <div class="flex gap-3">
-                                    <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors"><i class="fas fa-external-link-alt"></i></a>
-                                    <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-primary transition-colors"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex flex-wrap gap-2 mb-3">
-                                <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">React Native</span><span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Redux</span><span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">AWS</span>
-                            </div>
-                            <h3 class="font-display text-xl font-bold mb-2">Mobile Banking App</h3>
-                            <p class="text-light-300 text-sm">Secure mobile banking application with biometric authentication and real-time transactions.</p>
-                        </div>
-                    </div>
+                    {{featuredProjects}}
                 </div>
 
                 <a href="works.html" class="sm:hidden flex items-center justify-center gap-2 mt-6 text-primary">
@@ -350,38 +285,7 @@
                     <h2 class="font-display text-3xl md:text-4xl font-bold mt-2">Tech Stack</h2>
                 </div>
                 <div class="grid grid-cols-4 md:grid-cols-8 gap-4">
-                    
-                    <div class="tech-icon group">
-                        <i class="fab fa-html5 text-3xl" style="color: #E34F26" title="HTML5"></i>
-                    </div>
-
-                    <div class="tech-icon group">
-                        <i class="fab fa-css3-alt text-3xl" style="color: #1572B6" title="CSS3"></i>
-                    </div>
-
-                    <div class="tech-icon group">
-                        <i class="fab fa-js text-3xl" style="color: #F7DF1E" title="JavaScript"></i>
-                    </div>
-
-                    <div class="tech-icon group">
-                        <i class="fab fa-react text-3xl" style="color: #61DAFB" title="React"></i>
-                    </div>
-
-                    <div class="tech-icon group">
-                        <i class="fab fa-node-js text-3xl" style="color: #339933" title="Node.js"></i>
-                    </div>
-
-                    <div class="tech-icon group">
-                        <i class="fab fa-python text-3xl" style="color: #3776AB" title="Python"></i>
-                    </div>
-
-                    <div class="tech-icon group">
-                        <i class="fab fa-aws text-3xl" style="color: #FF9900" title="AWS"></i>
-                    </div>
-
-                    <div class="tech-icon group">
-                        <i class="fab fa-git-alt text-3xl" style="color: #F05032" title="Git"></i>
-                    </div>
+                    {{techStackIcons}}
                 </div>
             </div>
         </div>
@@ -393,9 +297,9 @@
             <div class="flex flex-col md:flex-row items-center justify-between gap-4">
                 <div class="flex items-center gap-2">
                     <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center font-display font-bold text-sm">
-                        Shubham
+                        {{name}}
                     </div>
-                    <span class="text-light-300">© 2025 Shubham. All rights reserved.</span>
+                    <span class="text-light-300">© {{year}} {{name}}. All rights reserved.</span>
                 </div>
                 <div class="flex items-center gap-6">
                     <a href="index.html" class="text-light-300 hover:text-white transition-colors">Home</a>

@@ -16,32 +16,90 @@ A beautiful, professional, and responsive multi-page portfolio website built wit
 ## 📁 Project Structure
 
 ```
-├── index.html          # Home page with hero and overview
-├── about.html          # About page with experience, skills, services
-├── works.html          # Portfolio/projects page with filter
-├── contact.html        # Contact form and information
+├── index.html              # Home page (generated)
+├── about.html              # About page (generated)
+├── works.html              # Portfolio/projects page (generated)
+├── contact.html            # Contact form page (generated)
 ├── assets/
 │   ├── css/
-│   │   └── style.css   # Custom styles and animations
+│   │   └── style.css       # Custom styles and animations
 │   └── js/
-│       └── main.js     # JavaScript functionality
-├── CNAME               # Custom domain configuration
-└── README.md           # This file
+│       └── main.js         # JavaScript functionality
+├── content/
+│   └── data.json           # 📝 All portfolio content (edit this!)
+├── templates/
+│   ├── index.template.html     # Home page template
+│   ├── about.template.html     # About page template
+│   ├── works.template.html     # Works page template
+│   └── contact.template.html   # Contact page template
+├── admin/
+│   ├── index.html          # Admin panel UI
+│   └── admin.js            # Admin panel JavaScript
+├── scripts/
+│   └── build.js            # Build script to generate pages
+├── CNAME                   # Custom domain configuration
+└── README.md               # This file
 ```
 
 ## 🚀 Quick Start
 
 1. **Clone or fork this repository**
-2. **Customize the content** - Update the HTML files with your information
-3. **Replace images** - Add your own profile picture and project screenshots
-4. **Update links** - Add your social media and project links
+2. **Install Node.js** (for the build system)
+3. **Edit content** - Use the Admin Panel or edit `content/data.json` directly
+4. **Build the site** - Run `node scripts/build.js` to generate pages
 5. **Push to GitHub** - Your portfolio will be live at `username.github.io`
+
+## 📝 Content Management System (CMS)
+
+This portfolio includes a simple CMS workflow for easy content updates without editing HTML directly.
+
+### Option 1: Admin Panel (Recommended)
+
+1. Open `admin/index.html` in your browser
+2. Edit content using the visual forms
+3. Click "Export Data" to download updated `data.json`
+4. Replace `content/data.json` with the downloaded file
+5. Run the build script: `node scripts/build.js`
+6. Commit and push changes
+
+### Option 2: Direct JSON Editing
+
+1. Edit `content/data.json` directly with your content
+2. Run the build script: `node scripts/build.js`
+3. Commit and push changes
+
+### Build Script Commands
+
+```bash
+# Generate all pages from templates
+node scripts/build.js
+
+# The script will:
+# - Read content from content/data.json
+# - Process each template in templates/
+# - Generate final HTML pages in root directory
+```
+
+### Content Structure (data.json)
+
+The `data.json` file contains all your portfolio content:
+
+- **profile**: Name, title, bio, photo, email, location
+- **stats**: Years of experience, projects count, clients, etc.
+- **services**: List of services you offer
+- **projects**: Portfolio items with title, category, image, links
+- **experience**: Work history with dates and descriptions
+- **education**: Educational background
+- **skills**: Technical skills with proficiency percentages
+- **social**: Social media links
+- **contact**: Email, phone, location, availability
+- **faqs**: Frequently asked questions
 
 ## 🎨 Customization
 
 ### Colors
 
-The portfolio uses a purple-pink gradient theme. To change colors, update the Tailwind config in each HTML file:
+The portfolio uses a purple-pink gradient theme. To change colors, update the Tailwind config in each template file (`templates/*.template.html`):
 
 ```javascript
 tailwind.config = {
@@ -59,10 +117,15 @@ tailwind.config = {
 
 ### Content
 
-- **Personal Info**: Update name, title, and bio in all HTML files
-- **Experience**: Edit the experience section in `about.html`
-- **Projects**: Add your projects in `works.html` and `index.html`
-- **Contact**: Update email and social links in `contact.html`
+All content is managed through `content/data.json`. Use the Admin Panel or edit directly:
+
+- **Personal Info**: Update `profile` section
+- **Experience**: Edit `experience` array
+- **Projects**: Add/edit items in `projects` array
+- **Skills**: Update `skills` array with name and percentage
+- **Contact**: Modify `contact` and `social` sections
+
+After editing, run `node scripts/build.js` to regenerate the HTML pages.
 
 ### Images
 

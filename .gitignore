@@ -1,0 +1,17 @@
+# Admin panel - local only, not published to GitHub Pages
+admin/
+
+# Node modules (if you ever add npm packages)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log

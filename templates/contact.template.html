@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Shubham Portfolio</title>
-    <meta name="description" content="Get in touch with Shubham for collaboration, projects, or any inquiries">
+    <title>Contact | {{name}} Portfolio</title>
+    <meta name="description" content="Get in touch with {{name}} for collaboration, projects, or any inquiries">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -59,9 +59,9 @@
             <div class="flex items-center justify-between h-16 md:h-20">
                 <a href="index.html" class="flex items-center gap-2 group">
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center font-display font-bold text-lg group-hover:scale-110 transition-transform">
-                        Shubham
+                        {{name}}
                     </div>
-                    <span class="font-display font-semibold text-lg hidden sm:block">Shubham</span>
+                    <span class="font-display font-semibold text-lg hidden sm:block">{{name}}</span>
                 </a>
                 <div class="hidden md:flex items-center gap-8">
                     <a href="index.html" class="nav-link">Home</a>
@@ -125,7 +125,7 @@
                             <div>
                                 <h3 class="font-display font-semibold text-lg mb-1">Email Me</h3>
                                 <p class="text-light-300 text-sm mb-2">Drop me a line anytime</p>
-                                <a href="mailto:hello@techwithshubham.me" class="text-primary hover:underline break-all">hello@techwithshubham.me</a>
+                                <a href="mailto:{{email}}" class="text-primary hover:underline break-all">{{email}}</a>
                             </div>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                             <div>
                                 <h3 class="font-display font-semibold text-lg mb-1">Location</h3>
                                 <p class="text-light-300 text-sm mb-2">Based in</p>
-                                <p class="text-white">India</p>
+                                <p class="text-white">{{location}}</p>
                             </div>
                         </div>
                     </div>
@@ -151,9 +151,9 @@
                             <div>
                                 <h3 class="font-display font-semibold text-lg mb-1">Availability</h3>
                                 <p class="text-light-300 text-sm mb-2">Current Status</p>
-                                <p class="text-green-400 flex items-center gap-2">
+                                <p class="{{availabilityClass}} flex items-center gap-2">
                                     <span class="w-2 h-2 bg-current rounded-full animate-pulse"></span>
-                                    Available for work
+                                    {{availability}}
                                 </p>
                             </div>
                         </div>
@@ -163,12 +163,7 @@
                     <div class="bg-dark-100 rounded-3xl p-6">
                         <h3 class="font-display font-semibold text-lg mb-4">Connect With Me</h3>
                         <div class="grid grid-cols-2 gap-3">
-                            <a href="https://github.com/Shubham14793" class="flex items-center gap-3 p-3 bg-dark-200 rounded-xl hover:bg-white/10 transition-colors group"><i class="fab fa-github text-xl text-light-300 group-hover:text-white"></i><span class="text-sm">GitHub</span></a>
-                            <a href="#" class="flex items-center gap-3 p-3 bg-dark-200 rounded-xl hover:bg-[#0077B5]/20 transition-colors group"><i class="fab fa-linkedin-in text-xl text-light-300 group-hover:text-[#0077B5]"></i><span class="text-sm">LinkedIn</span></a>
-                            <a href="#" class="flex items-center gap-3 p-3 bg-dark-200 rounded-xl hover:bg-[#1DA1F2]/20 transition-colors group"><i class="fab fa-twitter text-xl text-light-300 group-hover:text-[#1DA1F2]"></i><span class="text-sm">Twitter</span></a>
-                            <a href="#" class="flex items-center gap-3 p-3 bg-dark-200 rounded-xl hover:bg-pink-500/20 transition-colors group"><i class="fab fa-instagram text-xl text-light-300 group-hover:text-pink-500"></i><span class="text-sm">Instagram</span></a>
-                            <a href="#" class="flex items-center gap-3 p-3 bg-dark-200 rounded-xl hover:bg-[#FF0000]/20 transition-colors group"><i class="fab fa-youtube text-xl text-light-300 group-hover:text-[#FF0000]"></i><span class="text-sm">YouTube</span></a>
-                            <a href="#" class="flex items-center gap-3 p-3 bg-dark-200 rounded-xl hover:bg-[#5865F2]/20 transition-colors group"><i class="fab fa-discord text-xl text-light-300 group-hover:text-[#5865F2]"></i><span class="text-sm">Discord</span></a>
+                            {{socialLinksGrid}}
                         </div>
                     </div>
                 </div>
@@ -264,46 +259,7 @@
                         <h2 class="font-display text-2xl font-bold mb-6">Frequently Asked Questions</h2>
                         
                         <div class="space-y-4">
-                            
-                            <div class="faq-item bg-dark-200 rounded-2xl overflow-hidden">
-                                <button class="faq-toggle w-full p-4 text-left flex items-center justify-between gap-4">
-                                    <span class="font-medium">What services do you offer?</span>
-                                    <i class="fas fa-chevron-down text-primary transition-transform"></i>
-                                </button>
-                                <div class="faq-content px-4 pb-4 hidden">
-                                    <p class="text-light-300 text-sm">I offer a range of services including web development, mobile app development, UI/UX design, and backend API development. I specialize in creating modern, responsive, and scalable digital solutions.</p>
-                                </div>
-                            </div>
-
-                            <div class="faq-item bg-dark-200 rounded-2xl overflow-hidden">
-                                <button class="faq-toggle w-full p-4 text-left flex items-center justify-between gap-4">
-                                    <span class="font-medium">What is your typical project timeline?</span>
-                                    <i class="fas fa-chevron-down text-primary transition-transform"></i>
-                                </button>
-                                <div class="faq-content px-4 pb-4 hidden">
-                                    <p class="text-light-300 text-sm">Project timelines vary based on complexity and scope. A typical website takes 2-4 weeks, while larger applications can take 2-3 months. I'll provide a detailed timeline after understanding your requirements.</p>
-                                </div>
-                            </div>
-
-                            <div class="faq-item bg-dark-200 rounded-2xl overflow-hidden">
-                                <button class="faq-toggle w-full p-4 text-left flex items-center justify-between gap-4">
-                                    <span class="font-medium">Do you offer ongoing support?</span>
-                                    <i class="fas fa-chevron-down text-primary transition-transform"></i>
-                                </button>
-                                <div class="faq-content px-4 pb-4 hidden">
-                                    <p class="text-light-300 text-sm">Yes! I offer ongoing maintenance and support packages to ensure your project stays up-to-date, secure, and running smoothly. This includes bug fixes, updates, and feature enhancements.</p>
-                                </div>
-                            </div>
-
-                            <div class="faq-item bg-dark-200 rounded-2xl overflow-hidden">
-                                <button class="faq-toggle w-full p-4 text-left flex items-center justify-between gap-4">
-                                    <span class="font-medium">How do we get started?</span>
-                                    <i class="fas fa-chevron-down text-primary transition-transform"></i>
-                                </button>
-                                <div class="faq-content px-4 pb-4 hidden">
-                                    <p class="text-light-300 text-sm">Simply fill out the contact form above or send me an email. I'll review your requirements and schedule a free consultation call to discuss your project in detail and provide a quote.</p>
-                                </div>
-                            </div>
+                            {{faqItems}}
                         </div>
                     </div>
                 </div>
@@ -318,7 +274,7 @@
                         <p class="text-light-300">Let's turn your ideas into reality. I'm just a message away!</p>
                     </div>
                     <div class="flex gap-4">
-                        <a href="mailto:hello@techwithshubham.me" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-dark-300 rounded-xl font-medium hover:bg-light-200 transition-colors">
+                        <a href="mailto:{{email}}" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-dark-300 rounded-xl font-medium hover:bg-light-200 transition-colors">
                             <i class="fas fa-envelope"></i>
                             Email Me
                         </a>
@@ -337,9 +293,9 @@
             <div class="flex flex-col md:flex-row items-center justify-between gap-4">
                 <div class="flex items-center gap-2">
                     <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center font-display font-bold text-sm">
-                        Shubham
+                        {{name}}
                     </div>
-                    <span class="text-light-300">© 2025 Shubham. All rights reserved.</span>
+                    <span class="text-light-300">© {{year}} {{name}}. All rights reserved.</span>
                 </div>
                 <div class="flex items-center gap-6">
                     <a href="index.html" class="text-light-300 hover:text-white transition-colors">Home</a>
