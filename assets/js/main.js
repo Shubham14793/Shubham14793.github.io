@@ -149,31 +149,51 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contact-form');
     const successMessage = document.getElementById('success-message');
 
+    // Formspree endpoint
+    const FORMSPREE_URL = 'https://formspree.io/f/meeoqjkq';
+
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
 
             // Get form data
             const formData = new FormData(contactForm);
             const data = Object.fromEntries(formData);
+            
+            // Get submit button and show loading state
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+            submitBtn.disabled = true;
 
-            // Here you would typically send the data to a server
-            // For now, we'll just show a success message
-            console.log('Form submitted:', data);
+            try {
+                const response = await fetch(FORMSPREE_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(data)
+                });
 
-            // Show success message
-            if (successMessage) {
-                successMessage.classList.remove('hidden');
-                contactForm.reset();
-
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    successMessage.classList.add('hidden');
-                }, 5000);
+                if (response.ok) {
+                    // Show success message
+                    if (successMessage) {
+                        successMessage.classList.remove('hidden');
+                        contactForm.reset();
+                        setTimeout(() => {
+                            successMessage.classList.add('hidden');
+                        }, 5000);
+                    }
+                    successMessage?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('Sorry, there was an error sending your message. Please try again or email me directly.');
+            } finally {
+                // Reset button state
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
             }
-
-            // Scroll to success message
-            successMessage?.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
     }
 

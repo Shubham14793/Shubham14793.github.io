@@ -1,50 +1,54 @@
 {
   "profile": {
     "name": "Shubham",
-    "title": "Full Stack Developer",
-    "tagline": "A passionate developer crafting beautiful digital experiences with modern technologies.",
-    "bio": "I'm a passionate full-stack developer with expertise in building scalable web applications and beautiful user interfaces. With a strong foundation in both frontend and backend technologies, I create seamless digital experiences that make a difference.",
-    "bioExtended": "My journey in tech started with curiosity and grew into a career driven by innovation. I believe in writing clean, maintainable code and staying updated with the latest industry trends.",
+    "title": "Engineering Technical Lead",
+    "tagline": "Engineering Team Lead | Full-Stack & Cloud Strategy | Building Scalable Products & High-Performing Teams",
+    "bio": "I'm a passionate technical lead and developer with expertise in building scalable web applications and beautiful user interfaces. With a strong foundation in both frontend and backend technologies and other core technologies, I create seamless digital experiences that make a difference.",
+    "bioExtended": "I believe in continuous learning to adapt to fast changing tech world. My journey in tech started with curiosity and grew into a career driven by innovation. I believe in writing clean, maintainable code and staying updated with the latest industry trends.",
     "avatar": "assets/images/PROFILE-PIC.jpeg",
     "location": "India",
-    "email": "helloreachouttiome@techwithshubham.me",
+    "email": "shubham.14793@gmail.com",
     "website": "https://techwithshubham.me",
     "resumeUrl": "assets/documents/resume.pdf",
     "availability": true
   },
   "stats": {
-    "yearsExperience": 5,
-    "projectsCompleted": 50,
-    "happyClients": 30
+    "yearsExperience": 10,
+    "projectsCompleted": 25,
+    "happyClients": 0
   },
   "social": {
     "github": "https://github.com/Shubham14793",
-    "linkedin": "#",
-    "x": "#",
+    "linkedin": "https://www.linkedin.com/in/shubham-9ba87285",
+    "twitter": "",
     "instagram": "#",
-    "youtube": "#",
-    "discord": "#"
+    "youtube": "https://youtube.com/@shubhammtomar2109?si=sQikbp32vqh5WCo_",
+    "discord": "https://discord.com/users/shubhamm8802"
   },
   "skills": [
     {
       "name": "JavaScript / TypeScript",
-      "level": 95
-    },
-    {
-      "name": "React / Vue.js",
       "level": 90
     },
     {
-      "name": "Node.js / Python",
+      "name": "ReactJS / NextJS",
+      "level": 90
+    },
+    {
+      "name": "NodeJS / Express / NodeJS Lambda / Serverless",
       "level": 85
     },
     {
-      "name": "AWS / Cloud",
+      "name": "Java / SpringBoot / microservices",
       "level": 80
     },
     {
-      "name": "UI/UX Design",
+      "name": "AWS Cloud",
       "level": 75
+    },
+    {
+      "name": "Devops / Jenkins / Github Actions",
+      "level": 85
     }
   ],
   "languages": [
@@ -60,60 +64,53 @@
   "experience": [
     {
       "id": "exp-1",
-      "title": "Senior Full Stack Developer",
-      "company": "Tech Company Inc.",
-      "period": "2022 - Present",
+      "title": "Expert Engineer / Tech Lead",
+      "company": "Fidelity International",
+      "period": "Jan 2019 - Present",
       "description": "Leading development of enterprise-scale applications, mentoring junior developers, and architecting scalable solutions."
     },
     {
       "id": "exp-2",
-      "title": "Full Stack Developer",
-      "company": "Digital Agency",
-      "period": "2020 - 2022",
+      "title": "Associate IT consultant (IS3)",
+      "company": "ITC Infotech India Ltd",
+      "period": "Jul 2015 - Dec 2019",
       "description": "Developed custom web applications for clients across various industries, focusing on React and Node.js."
-    },
-    {
-      "id": "exp-3",
-      "title": "Junior Developer",
-      "company": "Startup Hub",
-      "period": "2018 - 2020",
-      "description": "Started my career building responsive websites and learning modern web development practices."
     }
   ],
   "education": [
     {
       "id": "edu-1",
-      "degree": "Bachelor's in Computer Science",
-      "institution": "University of Technology",
-      "period": "2014 - 2018"
+      "degree": "MBA - Executive",
+      "institution": "Faculty of Management Studies, DU",
+      "period": "2023 - 2025"
     },
     {
       "id": "edu-2",
-      "degree": "Full Stack Development",
-      "institution": "Online Certification",
-      "period": "2019"
+      "degree": "B.Tech",
+      "institution": "Delhi Technological University",
+      "period": "2011 - 2015"
     }
   ],
   "certifications": [
     {
       "id": "cert-1",
-      "name": "AWS Certified Developer",
-      "issuer": "Amazon Web Services",
-      "icon": "fab fa-aws",
+      "name": "AI Foundation course",
+      "issuer": "Fidelity International",
+      "icon": "",
       "color": "from-amber-500 to-orange-500"
     },
     {
       "id": "cert-2",
-      "name": "Professional Cloud Architect",
-      "issuer": "Google Cloud",
+      "name": "Certification in Introduction to data analytics",
+      "issuer": " UCD Professional Academy",
       "icon": "fab fa-google",
       "color": "from-blue-500 to-cyan-500"
     },
     {
       "id": "cert-3",
-      "name": "Meta Frontend Developer",
-      "issuer": "Meta",
-      "icon": "fab fa-meta",
+      "name": "Google Project Management (Basics)",
+      "issuer": "Coursera",
+      "icon": "fab fa-google",
       "color": "from-primary to-secondary"
     }
   ],
@@ -134,8 +131,8 @@
     },
     {
       "id": "svc-3",
-      "title": "UI/UX Design",
-      "description": "Designing intuitive and beautiful user interfaces that enhance user experience.",
+      "title": "Devops & CI/CD",
+      "description": "Providing end to end solutions to bring your application to production with quality standard.",
       "icon": "fas fa-palette",
       "color": "from-amber-500 to-orange-500"
     },
