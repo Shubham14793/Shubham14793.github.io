@@ -5,7 +5,8 @@
   "scripts": {
     "build": "node scripts/build.js",
     "serve": "python3 -m http.server 3000",
-    "dev": "echo 'Run npm run serve in one terminal, then open http://localhost:3000'"
+    "form-server": "node scripts/form-server.js",
+    "dev": "echo 'Run: npm run serve (terminal 1) + npm run form-server (terminal 2)'"
   },
   "author": "Shubham",
   "license": "MIT"
